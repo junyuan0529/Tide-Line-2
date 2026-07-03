@@ -217,16 +217,25 @@ tailwind.config = {
 
   <!-- 調整上方的 padding (pt-16) 以避開導航列 -->
   <div class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-20 sm:pb-36">
-    <img src="https://wandering2026.github.io/Tide-Line-Images/Logo.png" alt="停浪線計畫 Logo" class="w-full max-w-[190px] sm:max-w-[280px] h-auto object-contain mb-8 sm:mb-10" decoding="async">
+    <div class="grid grid-cols-[1fr_auto] gap-6 sm:gap-10 items-center mb-6 sm:mb-8">
+      <!-- 左側文字區塊 -->
+      <div class="flex flex-col justify-center">
+        <p class="eyebrow on-dark mb-4 sm:mb-6">一場跨體制的教育實驗</p>
+        <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
+          停浪線計畫
+        </h1>
+        <p class="font-display font-medium text-xl sm:text-3xl text-foam tracking-wide">Tide&nbsp;Line</p>
+      </div>
+      
+      <!-- 右側 Logo 區塊 -->
+      <div class="flex items-center justify-end w-full max-w-[45vw] sm:max-w-none">
+         <img src="https://wandering2026.github.io/Tide-Line-Images/Logo.png" alt="停浪線計畫 Logo" class="max-h-[160px] sm:max-h-[280px] md:max-h-[340px] w-auto object-contain" decoding="async">
+      </div>
+    </div>
 
-    <p class="eyebrow on-dark mb-4 sm:mb-6">一場跨體制的教育實驗</p>
-
-    <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
-      停浪線計畫
-    </h1>
-    <p class="font-display font-medium text-xl sm:text-3xl text-foam mb-6 sm:mb-8 tracking-wide">Tide&nbsp;Line</p>
-
-    <p class="text-base sm:text-xl text-paper/85 leading-relaxed max-w-2xl mb-8 sm:mb-10">
+    <!-- 將 mb-8 sm:mb-10 改小，並加上負的 margin-top (例如 -mt-4 或 -mt-6) 來向上拉升 -->
+    <!-- 這裡我先使用 mt-0 來消除預設可能的空間，如果還要更近，可以使用負值如 -mt-4 -->
+    <p class="text-base sm:text-xl text-paper/85 leading-relaxed max-w-2xl mb-8 sm:mb-10 mt-0">
       浪退去後，沙灘上留下一道潮痕——那是浪來過的證據，也是暫時歇息的界線。
       停浪線計畫把主動權交還給學生，以「玩」的姿態，透過跨體制共創面對焦慮與迷茫，
       在快速變動的世界中找回生活品味，看見彼此最真實的樣貌。
@@ -694,7 +703,7 @@ tailwind.config = {
     revealEls.forEach(el => el.classList.add('in-view'));
   }
 
-  // 新增：手機版導航列選單切換邏輯
+  // 手機版導航列選單切換邏輯
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
