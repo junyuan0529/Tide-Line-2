@@ -46,8 +46,9 @@ tailwind.config = {
       },
       fontFamily: {
         display: ['"Fraunces"', 'serif'],
-        serif: ['"Noto Serif TC"', 'serif'],
-        sans: ['"Noto Sans TC"', 'sans-serif'],
+        /* 將 Fraunces 放在中文字體前面，優先套用在英文與數字上 */
+        serif: ['"Fraunces"', '"Noto Serif TC"', 'serif'],
+        sans: ['"Fraunces"', '"Noto Sans TC"', 'sans-serif'],
       }
     }
   }
@@ -60,7 +61,8 @@ tailwind.config = {
   }
   
   body { 
-    font-family: 'Noto Sans TC', sans-serif; 
+    /* 同樣把 Fraunces 放在第一順位 */
+    font-family: 'Fraunces', 'Noto Sans TC', sans-serif; 
     background: var(--paper); 
     color: var(--ink); 
     -webkit-text-size-adjust: 100%; 
@@ -71,7 +73,7 @@ tailwind.config = {
   }
   
   .font-en{ font-family:'Fraunces', serif; }
-  h1,h2,h3,h4{ font-family:'Noto Serif TC', serif; }
+  h1,h2,h3,h4{ font-family:'Fraunces', 'Noto Serif TC', serif; }
 
   /* Comfortable tap targets on touch devices */
   @media (max-width: 767px){
@@ -82,7 +84,7 @@ tailwind.config = {
   /* Eyebrow label with a tide-mark tick */
   .eyebrow{
     display:inline-flex; align-items:center; gap:.55rem;
-    font-family:'Noto Sans TC', sans-serif; font-weight:500; font-size:.78rem;
+    font-family:'Fraunces', 'Noto Sans TC', sans-serif; font-weight:500; font-size:.78rem;
     letter-spacing:.14em; color:var(--tide);
   }
   .eyebrow::before{
@@ -171,9 +173,8 @@ tailwind.config = {
 <nav class="fixed top-0 left-0 right-0 z-[100] bg-ink/90 backdrop-blur-md border-b border-paper/10 transition-all duration-300">
   <div class="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
     <!-- Brand -->
-    <a href="#" class="flex items-center gap-3 transition-opacity hover:opacity-80">
-      <img src="https://wandering2026.github.io/Tide-Line-Images/Logo.png" alt="停浪線計畫 Logo" class="h-6 sm:h-7 w-auto object-contain">
-      <span class="font-en text-lg text-paper tracking-wide font-medium">Tide Line</span>
+    <a href="#" class="flex items-center transition-opacity hover:opacity-80">
+      <span class="font-en text-xl text-paper tracking-wide font-medium">Tide Line</span>
     </a>
     
     <!-- Desktop Links -->
@@ -223,7 +224,7 @@ tailwind.config = {
     <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
       停浪線計畫
     </h1>
-    <p class="font-en italic text-xl sm:text-3xl text-foam mb-6 sm:mb-8 tracking-wide">Tide&nbsp;Line</p>
+    <p class="font-display font-medium text-xl sm:text-3xl text-foam mb-6 sm:mb-8 tracking-wide">Tide&nbsp;Line</p>
 
     <p class="text-base sm:text-xl text-paper/85 leading-relaxed max-w-2xl mb-8 sm:mb-10">
       浪退去後，沙灘上留下一道潮痕——那是浪來過的證據，也是暫時歇息的界線。
@@ -243,12 +244,7 @@ tailwind.config = {
 <!-- ============ 關於計畫 ============ -->
 <section id="about" class="bg-paper">
   <div class="max-w-5xl mx-auto px-5 sm:px-8 py-14 sm:py-24">
-    <div class="flex items-center gap-3 mb-4">
-      <p class="eyebrow !mb-0">關於計畫</p>
-      <span class="w-7 h-7 rounded-full bg-ink overflow-hidden inline-block shrink-0" aria-hidden="true">
-        <img src="https://wandering2026.github.io/Tide-Line-Images/swirl-mark.png" width="64" height="80" alt="" class="w-full h-full object-cover line-art" loading="lazy" decoding="async">
-      </span>
-    </div>
+    <p class="eyebrow mb-4">關於計畫</p>
     <h2 class="text-3xl sm:text-4xl font-bold text-ink mb-12">從「玩」開始，找回學習的本質</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/12 mb-4">
@@ -290,12 +286,7 @@ tailwind.config = {
 <!-- ============ 計畫內容 / 基本資訊 ============ -->
 <section id="info" class="bg-paper-deep">
   <div class="max-w-5xl mx-auto px-5 sm:px-8 py-14 sm:py-24">
-    <div class="flex items-center gap-3 mb-4">
-      <p class="eyebrow !mb-0">計畫內容</p>
-      <span class="w-7 h-7 rounded-full bg-ink overflow-hidden inline-block shrink-0" aria-hidden="true">
-        <img src="https://wandering2026.github.io/Tide-Line-Images/frame-oval.png" width="64" height="80" alt="" class="w-full h-full object-cover line-art" loading="lazy" decoding="async">
-      </span>
-    </div>
+    <p class="eyebrow mb-4">計畫內容</p>
     <h2 class="text-3xl sm:text-4xl font-bold text-ink mb-10">活動基本資訊</h2>
 
     <div class="space-y-4 text-ink/75 leading-relaxed max-w-3xl mb-10 sm:mb-16">
@@ -512,12 +503,7 @@ tailwind.config = {
 
 <section class="bg-paper">
   <div class="max-w-5xl mx-auto px-5 sm:px-8 py-14 sm:py-24">
-    <div class="flex items-center gap-3 mb-4">
-      <p class="eyebrow !mb-0">Day 2 · 7/19（日）</p>
-      <span class="w-7 h-7 rounded-full bg-ink overflow-hidden inline-block shrink-0" aria-hidden="true">
-        <img src="https://wandering2026.github.io/Tide-Line-Images/frame-travel.png" width="64" height="80" alt="" class="w-full h-full object-cover line-art" loading="lazy" decoding="async">
-      </span>
-    </div>
+    <p class="eyebrow mb-4">Day 2 · 7/19（日）</p>
     <h2 class="text-3xl sm:text-4xl font-bold text-ink mb-8">城市探索——生活觀察站</h2>
 
     <p class="text-ink/75 leading-relaxed max-w-3xl mb-6">
