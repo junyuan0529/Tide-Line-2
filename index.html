@@ -219,22 +219,27 @@ tailwind.config = {
     
     <!-- 新增一個 max-w-3xl 的包裝容器，讓 Logo 與下方段落的右側完美切齊 -->
     <div class="max-w-3xl">
-      <div class="grid grid-cols-[1fr_auto] gap-4 sm:gap-8 items-stretch mb-6 sm:mb-8">
-        <!-- 左側文字區塊 -->
-        <div class="flex flex-col justify-between py-2 sm:py-4">
+      <!-- 強制全尺寸保持左右排列：左側文字，右側 Logo -->
+      <div class="grid grid-cols-[1fr_auto] gap-2 sm:gap-8 items-stretch mb-6 sm:mb-8">
+        
+        <!-- 左側/上方文字區塊 -->
+        <div class="flex flex-col justify-between py-1 sm:py-4">
           <div>
-            <p class="eyebrow on-dark mb-4 sm:mb-6">一場跨體制的教育實驗</p>
-            <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
+            <p class="eyebrow on-dark mb-3 sm:mb-6">一場跨體制的教育實驗</p>
+            <!-- 手機版稍微縮小字級為 text-[2rem] 以確保左右並排不破版 -->
+            <h1 class="text-[2rem] sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-1 sm:mb-3">
               停浪線計畫
             </h1>
           </div>
-          <p class="font-display font-medium text-xl sm:text-3xl text-foam tracking-wide">Tide&nbsp;Line</p>
+          <p class="font-display font-medium text-lg sm:text-3xl text-foam tracking-wide">Tide&nbsp;Line</p>
         </div>
         
-        <!-- 右側 Logo 區塊 -->
-        <div class="flex items-center justify-end w-full max-w-[40vw] sm:max-w-none">
-           <img src="https://wandering2026.github.io/Tide-Line-Images/logo.PNG" alt="停浪線計畫 Logo" class="max-h-[90px] sm:max-h-[140px] md:max-h-[180px] w-auto object-contain -translate-x-2 sm:-translate-x-14" decoding="async">
+        <!-- 右側/下方 Logo 區塊 -->
+        <div class="flex items-center justify-end w-full">
+           <!-- 手機版稍微微調位置 (-translate-x-1)，桌機保留您的設定 (sm:-translate-x-14) -->
+           <img src="https://wandering2026.github.io/Tide-Line-Images/logo.PNG" alt="停浪線計畫 Logo" class="max-h-[130px] sm:max-h-[140px] md:max-h-[180px] w-auto object-contain -translate-x-1 sm:-translate-x-18" decoding="async">
         </div>
+        
       </div>
 
       <!-- 移除原本的 max-w-2xl，讓文字自然填滿 max-w-3xl 容器，藉此與 Logo 邊緣對齊 -->
