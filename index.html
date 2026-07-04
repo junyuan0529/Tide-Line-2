@@ -215,35 +215,41 @@ tailwind.config = {
   <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(22,35,43,.55) 0%, rgba(22,35,43,.72) 45%, rgba(22,35,43,.92) 100%);"></div>
 
   <!-- 調整上方的 padding (pt-16) 以避開導航列 -->
-  <div class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-20 sm:pb-36">
-    <div class="grid grid-cols-[1fr_auto] gap-6 sm:gap-10 items-center mb-6 sm:mb-8">
-      <!-- 左側文字區塊 -->
-      <div class="flex flex-col justify-center">
-        <p class="eyebrow on-dark mb-4 sm:mb-6">一場跨體制的教育實驗</p>
-        <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
-          停浪線計畫
-        </h1>
-        <p class="font-display font-medium text-xl sm:text-3xl text-foam tracking-wide">Tide&nbsp;Line</p>
+  <div class="relative max-w-5xl mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-20 sm:pb-36">
+    
+    <!-- 新增一個 max-w-3xl 的包裝容器，讓 Logo 與下方段落的右側完美切齊 -->
+    <div class="max-w-3xl">
+      <div class="grid grid-cols-[1fr_auto] gap-4 sm:gap-8 items-stretch mb-6 sm:mb-8">
+        <!-- 左側文字區塊 -->
+        <div class="flex flex-col justify-between py-2 sm:py-4">
+          <div>
+            <p class="eyebrow on-dark mb-4 sm:mb-6">一場跨體制的教育實驗</p>
+            <h1 class="text-4xl sm:text-7xl font-bold text-paper leading-[1.15] sm:leading-[1.1] mb-2 sm:mb-3">
+              停浪線計畫
+            </h1>
+          </div>
+          <p class="font-display font-medium text-xl sm:text-3xl text-foam tracking-wide">Tide&nbsp;Line</p>
+        </div>
+        
+        <!-- 右側 Logo 區塊 -->
+        <div class="flex items-center justify-end w-full max-w-[40vw] sm:max-w-none">
+           <img src="https://wandering2026.github.io/Tide-Line-Images/logo.PNG" alt="停浪線計畫 Logo" class="max-h-[90px] sm:max-h-[140px] md:max-h-[180px] w-auto object-contain -translate-x-2 sm:-translate-x-10" decoding="async">
+        </div>
       </div>
-      
-      <!-- 右側 Logo 區塊 -->
-      <div class="flex items-center justify-end w-full max-w-[45vw] sm:max-w-none">
-         <img src="https://wandering2026.github.io/Tide-Line-Images/logo.PNG" alt="停浪線計畫 Logo" class="max-h-[160px] sm:max-h-[280px] md:max-h-[340px] w-auto object-contain" decoding="async">
+
+      <!-- 移除原本的 max-w-2xl，讓文字自然填滿 max-w-3xl 容器，藉此與 Logo 邊緣對齊 -->
+      <p class="text-base sm:text-xl text-paper/85 leading-relaxed mb-8 sm:mb-10 mt-4 sm:mt-6">
+        浪退去後，沙灘上留下一道潮痕——那是浪來過的證據，也是暫時歇息的界線。
+        停浪線計畫把主動權交還給學生，以「玩」的姿態，透過跨體制共創面對焦慮與迷茫，
+        在快速變動的世界中找回生活品味，看見彼此最真實的樣貌。
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-3.5 rounded-sm font-medium text-center w-full sm:w-auto">立即報名參與</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScidhVzqEfywpXQnwuek4qtsDvXUmMOwZwCVXLDwKZDfboBOA/viewform" target="_blank" rel="noopener noreferrer" class="btn-secondary !border-paper !text-paper hover:!bg-paper hover:!text-ink px-8 py-3.5 rounded-sm font-medium text-center w-full sm:w-auto">贊助計畫</a>
       </div>
     </div>
 
-    <!-- 將 mb-8 sm:mb-10 改小，並加上負的 margin-top (例如 -mt-4 或 -mt-6) 來向上拉升 -->
-    <!-- 這裡我先使用 mt-0 來消除預設可能的空間，如果還要更近，可以使用負值如 -mt-4 -->
-    <p class="text-base sm:text-xl text-paper/85 leading-relaxed max-w-2xl mb-8 sm:mb-10 mt-0">
-      浪退去後，沙灘上留下一道潮痕——那是浪來過的證據，也是暫時歇息的界線。
-      停浪線計畫把主動權交還給學生，以「玩」的姿態，透過跨體制共創面對焦慮與迷茫，
-      在快速變動的世界中找回生活品味，看見彼此最真實的樣貌。
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="btn-primary px-8 py-3.5 rounded-sm font-medium text-center w-full sm:w-auto">立即報名參與</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScidhVzqEfywpXQnwuek4qtsDvXUmMOwZwCVXLDwKZDfboBOA/viewform" target="_blank" rel="noopener noreferrer" class="btn-secondary !border-paper !text-paper hover:!bg-paper hover:!text-ink px-8 py-3.5 rounded-sm font-medium text-center w-full sm:w-auto">贊助計畫</a>
-    </div>
   </div>
 </header>
 
