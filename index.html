@@ -681,9 +681,11 @@ tailwind.config = {
       </div>
 
       <div class="border-t border-paper/20 pt-7">
-        <span class="block w-14 h-14 rounded-full overflow-hidden mb-5 border border-paper/25">
-          <img src="https://wandering2026.github.io/Tide-Line-Images/seal-circle.jpg" width="140" height="140" alt="" class="w-full h-full object-cover" style="object-position:50% 78%;" loading="lazy" decoding="async">
-        </span>
+        <!-- 移除圖片，替換為與前面風格一致的 SVG 圖示 -->
+        <svg class="pillar-icon w-9 h-9 mb-5" fill="none" viewBox="0 0 24 24" stroke-width="1.4">
+          <!-- 這個圖示象徵著「連結、交織與共創」 -->
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
         <h3 class="font-bold text-lg text-paper mb-3">跨體制共創<br>集體創作</h3>
         <p class="text-sm text-paper/70 leading-relaxed">從車票地圖到主視覺共創，參與者不只是活動的消費者，更是共同作者——每個人的貢獻都將被看見、被記錄。</p>
       </div>
@@ -694,9 +696,7 @@ tailwind.config = {
 </main>
 
 <footer class="bg-ink text-paper text-center py-12 sm:py-16 border-t border-paper/10">
-  <span class="block w-16 h-16 rounded-full overflow-hidden mx-auto mb-6 border border-paper/20">
-    <img src="https://wandering2026.github.io/Tide-Line-Images/badge-round.jpg" width="160" height="160" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async">
-  </span>
+  <img src="https://wandering2026.github.io/Tide-Line-Images/logo.PNG" alt="停浪線計畫 Logo" class="mx-auto mb-6 h-14 sm:h-16 w-auto object-contain" loading="lazy" decoding="async">
   <p class="font-en italic text-foam text-lg mb-6">the tide always leaves a mark</p>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSepuJiZShmdcq8QpGgVnMXtw6csF9n3bxCpwX1_H3Ya-3vdFw/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3.5 border border-paper/50 rounded-sm font-medium text-paper hover:bg-paper hover:text-ink transition-colors">立即報名參與</a>
   <p class="text-sm text-paper/40 mt-10">© 2026 停浪線計畫 Tide Line. All rights reserved.</p>
