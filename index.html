@@ -88,11 +88,10 @@ tailwind.config = {
     letter-spacing:.14em; color:var(--tide);
   }
   .eyebrow::before{
-    content:''; display:inline-block; width:22px; height:2px; background:var(--driftwood);
+    content:''; display:inline-block; width:22px; height:2px; background:currentColor;
     position:relative;
   }
   .eyebrow.on-dark{ color:var(--foam); }
-  .eyebrow.on-dark::before{ background:var(--foam); }
 
   /* Buttons */
   .btn-primary{
